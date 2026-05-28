@@ -162,11 +162,20 @@ export async function createInitialHelpMenu(client) {
     });
     embed.setTimestamp();
 
-        const selectRow = createSelectMenu(
+    const bugReportButton = new ButtonBuilder()
+        .setCustomId(BUG_REPORT_BUTTON_ID)
+        .setLabel("Report Bug")
+        .setStyle(ButtonStyle.Danger);
+
+    const selectRow = createSelectMenu(
         CATEGORY_SELECT_ID,
         "Select to view the commands",
         options,
     );
+
+    const buttonRow = new ActionRowBuilder().addComponents([
+        bugReportButton,
+    ]);
 
 
     return {
