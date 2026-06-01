@@ -158,7 +158,7 @@ export async function createInitialHelpMenu(client) {
     );
 
     embed.setFooter({ 
-        text: "Bot In Developpement." 
+        text: "Bot In Developpement. Created by Paladin_3. DM for infos" 
     });
     embed.setTimestamp();
 
