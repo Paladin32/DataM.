@@ -167,6 +167,11 @@ export async function createInitialHelpMenu(client) {
         .setLabel("Report Bug")
         .setStyle(ButtonStyle.Danger);
 
+    const Info1 = new Info2()
+        .setCustomId(BUG_REPORT_BUTTON_ID)
+        .setLabel("Info3")
+        .setStyle(ButtonStyle.Danger);
+
     const selectRow = createSelectMenu(
         CATEGORY_SELECT_ID,
         "Select to view the commands",
@@ -175,6 +180,7 @@ export async function createInitialHelpMenu(client) {
 
     const buttonRow = new ActionRowBuilder().addComponents([
         bugReportButton,
+        Info1,
     ]);
 
 
